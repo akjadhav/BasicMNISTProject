@@ -9,7 +9,7 @@ import tensorflow as tf
 
 from tensorflow.python.keras import layers
 from tensorflow.python.keras import Model
-from tensorflow import keras
+import keras
 from tensorflow.keras import models
 
 from sklearn.metrics import classification_report, confusion_matrix
