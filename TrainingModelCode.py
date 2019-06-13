@@ -7,10 +7,10 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 
 import tensorflow as tf
 
-from tensorflow.python.keras import layers
-from tensorflow.python.keras import Model
 import keras
-from tensorflow.keras import models
+from keras import layers
+from keras import Model
+from keras import models
 
 from sklearn.metrics import classification_report, confusion_matrix
 
