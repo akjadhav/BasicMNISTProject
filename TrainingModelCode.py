@@ -8,15 +8,15 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import tensorflow as tf
 
 import keras
-from keras import layers
-from keras import Model
-from keras import models
+from tensorflow.python.keras import layers
+from tensorflow.python.keras import Model
+from tensorflow.python.keras import models
 
 from sklearn.metrics import classification_report, confusion_matrix
 
 import matplotlib.pyplot as plt
 from keras.utils import np_utils
-# %matplotlib inline
+%matplotlib inline
 
 mnist = tf.keras.datasets.mnist
 
