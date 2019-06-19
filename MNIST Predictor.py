@@ -1,20 +1,10 @@
-
-# coding: utf-8
-
-# In[1]:
-
-
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
 from os import listdir
 from PIL import Image
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-# In[2]:
-
+%matplotlib inline
 
 def preprocess(photo_path):
     img = Image.open(photo_path)
@@ -26,14 +16,9 @@ def preprocess(photo_path):
     
     return img
 
-
-# In[10]:
-
-
 model = load_model(r'BasicMNISTModel.h5')
 
 photo_path = r'Prediction Data\two.jpeg'
 image = preprocess(photo_path)
 
 print('Model Predicted:' , int(model.predict_classes(image)))
-
