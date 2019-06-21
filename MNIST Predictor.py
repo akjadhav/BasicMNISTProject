@@ -1,11 +1,3 @@
-
-# coding: utf-8
-
-# # **Importing Libraries**
-
-# In[1]:
-
-
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
@@ -13,12 +5,6 @@ from os import listdir
 from PIL import Image
 import matplotlib.pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
-
-
-# # **Preprocessing Code to Make Prediction Images Model Compatible**
-
-# In[2]:
-
 
 def preprocess(photo_path):
     img = Image.open(photo_path)
@@ -32,16 +18,9 @@ def preprocess(photo_path):
     
     return img
 
-
-# # Predicting Classes from the **Model**
-
-# In[4]:
-
-
 model = load_model(r'BasicMNISTModel.h5')
 
 photo_path = r'Prediction Data\5.png' # file path of the image that is going to be predicted
 image = preprocess(photo_path)
 
 print('Model Predicted:' , int(model.predict_classes(image)))
-
